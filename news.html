@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+        <title>QuickApps</title>
+        
+        <!--CSS -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.1.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.3.1.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.3.1.css" />
+        
+        <!--Javascripts-->
+        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.3.1.js"></script>
+        
+        <!-- Twitter --><script src="js/twitter.js"></script>
+
+
+        <style type="text/css">
+            .my-button {background-image: url(images/menu.png) !important;background-repeat: no-repeat !important;background: transparent;height: 30px;width: 30px;border: 0 !important;}
+            </style>
+        
+    </head>
+    
+    <body>
+        <div data-role="page">
+            
+            <div data-role="header" data-position="fixed" data-theme="a">
+                <h1>QuickApps</h1>
+                <a href="#navg" data-role="botton" data-shadow="false" class="my-button" data-corners="false" data-iconshadow="false" ></a>
+            </div>
+
+            <div data-role="panel" id="navg" data-display="push" data-theme="a" data-position-fixed="true" >
+                <ul data-role="listview" data-theme="a">
+                    <h1 style="margin:5% 0 5% 10%;">QuickApps</h1>
+                    <li><a href="contacto.html" data-transition="slideup">Contacto</a></li>
+                    <li><a href="forms.html" data-transition="slideup">Formulario</a></li>
+                </ul>
+            </div>
+
+
+            <div data-role="content">
+                <div>  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>  </div>   
+
+                <div id="jstwitter"></div>
+            </div>
+
+
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar" data-grid="d">
+                    <ul>
+                        <li><a href="products.html" data-role="button" data-theme="reset" data-icon="portafolio" data-corners="false" data-iconshadow="false" data-transition="slideup">Portafolio</a></li>
+                        <li><a href="gallery.html" data-role="button" data-theme="reset" data-icon="galeria"  data-corners="false" data-iconshadow="false" data-ajax="false">Galería</a></li>
+                        <li><a href="facebook.html" data-role="button" data-theme="reset" data-icon="facebook" data-corners="false" data-iconshadow="false" data-transition="slideup">Facebook</a></li>
+                        <li><a href="map.html" data-role="button" data-theme="reset" data-icon="cerca"  data-corners="false" data-iconshadow="false" data-transition="slideup">Cerca de mi</a></li>
+                        <li><a href="#navg" data-role="button" data-theme="reset" data-icon="mas" data-corners="false" data-iconshadow="false" data-transition="slideup">Más</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>    
+        
+
+    </body>
+</html>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- archivo revisado para version Phonegap 2.5 y revisada la documentacion el 15 ABRIL 2013 -->
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id = "com.loscoches.carvajal"
+        versionCode="1"
+        version = "1.0">
+        
+    <!-- solo caracteres latinos y el nombre debe ser corto -->    
+    <name>LosCoches</name>
+    
+    <!-- La descripcion NO debe ser muy extensa -->  
+    <description>
+        El concesionario más grande de Colombia. 
+    </description>
+
+    <author href="http://carvajal.com" email="apps.carvajal@gmail.com">
+        Apps Carvajal Información
+    </author>
+    <!-- La etiqueta feature hace referencia a los apis phonegap utilizados y los permisos por parte de los dispositivos -->
+ 
+
+    <feature name="http://api.phonegap.com/1.0/device" />
+    <feature name="http://api.phonegap.com/1.0/battery"/>
+    <feature name="http://api.phonegap.com/1.0/camera"/>
+    <feature name="http://api.phonegap.com/1.0/contacts"/>
+    <feature name="http://api.phonegap.com/1.0/file"/>
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/media"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    <feature name="http://api.phonegap.com/1.0/notification"/>
+    
+    <access origin="*" />
+
+    <!-- Las etiquetas preference hacen referenciaa las preferencias, la usencia de alguna de esta tomara el valor por defecto -->
+    <!-- por defecto la ultima version estable de PhoneGap -->
+    <preference name="phonegap-version" value="2.9.0" />
+    
+    <!-- Por defecto la orientacion es ambas portrait and landscape -->
+    <preference name="orientation" value="default"/>
+    
+    <!-- Por defecto es universal, solo funciona para IOS, las variables son handset, tablet, or universal -->
+    <!-- <preference name="target-device" value="universal" /> -->
+    
+    <!-- Por defecto es false, aplica para IOS y Android, las variables son true or false  -->
+    <preference name="fullscreen" value="true" />
+    
+    <!-- Por defecto es true, aplica para IOS y si es false evita que te veas como en un frame-->
+    <preference name="webviewbounce" value="false" />
+    
+    <!-- Por defecto es false, aplica para IOS y si es true evita el glossy puesto por ios-->
+    <preference name="prerendered-icon" value="true" />
+    
+    <!-- Por defecto es false, si es true abre todos los links en el webview-->
+    <preference name="stay-in-webview" value="default" />
+    
+    <!-- Por defecto es true, identifica los numeros de telefono y fechas y los convierte en fechas -->
+    <!-- <preference name="detect-data-types" value="false" /> -->
+    
+    <!-- Por defecto es false, si se cambia a true cuando se oprime ejemplo home la aplicacion se suspende y se cierra -->
+    <preference name="exit-on-suspend" value="true" />
+    
+    <!-- Por defecto es 7 android 2.1 mirar tabla y es la minima version que soporta la app http://developer.android.com/guide/topics/manifest/uses-sdk-element.html -->
+    <preference name="android-minSdkVersion" value="8" />
+
+    <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+    <preference name="android-installLocation"    value="auto" />       
+    
+    <!-- No viene por defecto, solo se utiliza si fuera hasta una version en especifico, mirar misma url anterior -->
+    <!-- <preference name="android-maxSdkVersion" value="15" /> -->
+    
+    <!-- Duracion del splash por defecto son 5 sec 5000 -->
+    <preference name="splash-screen-duration" value="4000" />
+
+     <access origin="*" browserOnly="true" />
+
+    <icon src="icon.png" />
+    
+    <!-- IOS Icons -->
+    <!-- icono para ios - iphone  classic width="57" height="57" -->
+    <icon src="icons/ios/icon-57.png" gap:platform="ios" width="57" height="57" />
+    <!-- icono para ios - iphone retina width="72" height="72" -->
+    <icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+    <!-- icono para ios - ipad classic width="114" height="114" -->
+    <icon src="icons/ios/icon-57-2x.png" gap:platform="ios" width="114" height="114" />
+    <!-- icono para ios - ipad retina width="144" height="144" -->
+    <icon src="icons/ios/icon-72-2x.png" gap:platform="ios" width="144" height="144" />
+    
+    <!-- Android Icons -->
+    <!-- Android Icons low density 36x36 -->
+    <icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+    <!-- Android Icons low density 48x48 -->
+    <icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+    <!-- Android Icons low density 72x72 -->
+    <icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+    <!-- Android Icons low density 96x96 -->
+    <icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+    <!-- Android Icons low density 96x96 -->
+    <icon src="icons/android/xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
+
+    
+    <!-- BB Icons menos de 16kb-->
+    <!-- BB Icon 72x72 -->
+    <icon src="icons/bb/icon.png" gap:platform="blackberry" />
+    <!-- BB Icon 72x72 estado hover -->
+    <icon src="icons/bb/icon_hover.png" gap:platform="blackberry" gap:state="hover"/>
+    
+    <!-- WebOs Icons -->
+    <!-- WebOs Icon 29x29 -->
+    <icon src="icons/webos/icon.png" gap:platform="webos" />
+    <!-- WebOs Icon 15x15 -->
+    <icon src="icons/webos/miniicon.png" gap:platform="webos" gap:role="mini" />
+    
+    <!-- Windows Phone Icons -->
+    <!-- Windows Phone Icon 57x57 -->
+    <icon src="icons/winphone/icon.png" gap:platform="winphone" />
+    <icon src="icons/winphone/tile_icon.png" gap:platform="winphone" gap:role="background" />
+    
+    <!-- Splash Generico -->
+    <gap:splash src="splash.png" />
+    
+    <!-- Splash IOS -->
+    <gap:splash src="splash/ios/default.png" gap:platform="ios" width="320" height="480" />
+    <gap:splash src="splash/ios/default-2x.png" gap:platform="ios" width="640" height="960" />
+    <gap:splash src="splash/ios/default-iphone5.png" width="640" height="1136" />
+    <gap:splash src="splash/ios/default-portrait.png" gap:platform="ios" width="768" height="1024" />
+    <gap:splash src="splash/ios/default-landscape.png" gap:platform="ios" width="1024" height="768" />
+
+    <!-- Splash Android -->
+    <!-- Splash Android  320x480 ldpi-->
+    <gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+    <!-- Splash Android  640x960 ldpi-->
+    <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+    <!-- Splash Android  768x1024 ldpi-->
+    <gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+    <!-- Splash Android  1024x768 ldpi-->
+    <gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+    
+    <!-- Splash BB 640x960-->
+    <gap:splash src="splash/bb/splash.png" gap:platform="blackberry" />
+    
+    <!-- Splash Windows Phone 480x800 -->
+    <gap:splash src="splash/winphone/splash.jpg" gap:platform="winphone" />
+
+    <!-- Plug in Camera para IOS -->
+    <plugin name="Camera" value="CDVCamera" />
+    
+
+    <!--Plug in Network Android-->
+    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+
+    <!--Plug in Network IOS-->
+    <plugin name="NetworkStatus" value="CDVConnection" />
+
+    <!--InAppBrowser -->
+    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" /> <!--Android -->
+    <plugin name="InAppBrowser" value="CDVInAppBrowser" /> <!-- IOS -->
+    
+</widget>

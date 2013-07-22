@@ -156,4 +156,7 @@
     <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" /> <!--Android -->
     <plugin name="InAppBrowser" value="CDVInAppBrowser" /> <!-- IOS -->
     
+    
+    <gap:plugin name="com.phonegap.plugins.childbrowser" />
+    
 </widget>

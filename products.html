@@ -1,90 +1,118 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        
-        <title>QuickApps</title>
-        
-        <!--CSS -->
-        <link rel="stylesheet" type="text/css" href="css/styles.css" />
-        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.1.css" />
-        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.3.1.css" />
-        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.3.1.css" />
-        
-        <!--Javascripts-->
-        <script type="text/javascript" src="js/cordova.js"></script>
-        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-        <script type="text/javascript" src="js/jquery.mobile-1.3.1.js"></script>
-        
+<head>
 
-        <style type="text/css">
-            .my-button {background-image: url(images/menu.png) !important;background-repeat: no-repeat !important;background: transparent;height: 30px;width: 30px;border: 0 !important;}
-            </style>
-        
-    </head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width">
+<meta name="author" content="Carvajal Informacion" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<title>COMODISIMOS</title>
+
+<!-- Main CSS file --><link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+<!--JQueryMobile CSS --><link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
+  
+<!--JQueryMobile JS --> 
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.2.0.min.js"></script>
+
+<!-- FlexSlider --><script src="js/jquery.flexslider.js"></script>
     
-    <body>
-        <div data-role="page">
-            
-            <div data-role="header" data-position="fixed" data-theme="a">
-                <h1>QuickApps</h1>
-                <a href="#navg" data-role="botton" data-shadow="false" class="my-button" data-corners="false" data-iconshadow="false" ></a>
-            </div>
+<!-- Include the heartcode canvasloader js file -->
+  <script src="http://heartcode-canvasloader.googlecode.com/files/heartcode-canvasloader-min-0.9.1.js"></script>
 
+</head>
 
-            <div data-role="panel" id="navg" data-display="push" data-theme="a" data-position-fixed="true" >
-                <ul data-role="listview" data-theme="a">
-                    <h1 style="margin:5% 0 5% 10%;">QuickApps</h1>
-                    <li><a href="contacto.html" data-transition="slideup">Contacto</a></li>
-                    <li><a href="forms.html" data-transition="slideup">Formulario</a></li>
-                </ul>
-            </div>
+<body>
+    
+<div id="canvasloader-container" class="wrapper"></div>
+    
+<div data-role="page">
 
-      <div data-role="content" style="overflow:hidden;">
-           <ul data-role="listview">
-            <li><a href="#producto1"><P><strong>Endodoncia</strong></p> <p>Enfermedades Pulpa Dental</p></a></li>
-            <li><a href="#producto2"><p><strong>Ortodoncia</strong></p> <p>Malas posiciones dentales</p></a></li>
-            <li><a href="#producto3"><p><strong>Periodoncia</strong></p> <p>Tratamiento de los tejidos </p></a></li>
-            <li><a href="#producto4"><p><strong>Rehabilitación Oral</strong></p> <p>Tratamientos estéticos</p></a></li>
-            <li><a href="#producto5"><p><strong>Cirugía Oral y Maxilofacial</strong></p> <p>Especialidad medico-quirúrgica</p></a></li>
-            <li><a href="#producto6"><p><strong>Odontologiá Estetica</strong></p> <p>Aspecto de la sonrisa</p></a></li>
-            </ul> 
+  <div data-role="header" data-position="fixed" data-theme="b"> 
+    <h1>Productos</h1>
+  </div>
+
+    <!--  <div data-role="content" > COMO ERA SERVICIOS DE HOTELES
+
+        <p>Ofrecemos hoteles para todo tipo de turismo, como lo son hoteles de ciudad o en ambientes campestres, planes de eco aventura o agro-turismo, planes de sol y playa o en el interior del país o simplemente un plan para descansar un fin de semana. Todo esto es posible en Hoteles Estelar con nuestros planes.</p>
+
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#producto1" data-transition="slide">Planes Turísticos Estelar</a></li>
+            <li><a href="#producto2" data-transition="slide">Planes de Negocios</a></li>
+            <li><a href="#producto3" data-transition="slide">Planes Tiqueté Aéreo</a></li>
+        </ul>
+
       </div>
 
-            <div data-role="footer" data-position="fixed">
-                <div data-role="navbar" data-grid="d">
-                    <ul>
-                        <li><a href="products.html" data-role="button" data-theme="reset" data-icon="portafolio" data-corners="false" data-iconshadow="false" data-transition="slideup">Portafolio</a></li>
-                        <li><a href="gallery.html" data-role="button" data-theme="reset" data-icon="galeria"  data-corners="false" data-iconshadow="false" data-ajax="false">Galería</a></li>
-                        <li><a href="facebook.html" data-role="button" data-theme="reset" data-icon="facebook" data-corners="false" data-iconshadow="false" data-transition="slideup">Facebook</a></li>
-                        <li><a href="map.html" data-role="button" data-theme="reset" data-icon="cerca"  data-corners="false" data-iconshadow="false" data-transition="slideup">Cerca de mi</a></li>
-                        <li><a href="#navg" data-role="button" data-theme="reset" data-icon="mas" data-corners="false" data-iconshadow="false" data-transition="slideup">Más</a></li>
-                    </ul>
-                </div>
-            </div>
+       <div id="bottom_nav" data-fullscreen="true">
+        <div class="icons_nav">
+            <div class="paginated"> <!--Remove this DIV if you want to remove the pagination-->
 
+
+              <div data-role="content">
+           <ul data-filter="true" data-role="listview" data-theme="a">
+            <li><a href="#producto1"><img src="images/colchones.jpg"</a><P><strong>Colchones</strong></p> <p>Lineas de Colchones</p></a></li>
+            <li><a href="#producto2"><img src="images/almohadas.jpg"</a><p><strong>Almohadas</strong></p> <p>Comodas y confortabls</p></a></li>
+            <li><a href="#producto3"><img src="images/camas.jpg"</a><p><strong>Camas</strong></p> <p>Plenitud al dormir</p></a></li>
+           <li><a href="#producto4"><img src="images/accesorios.jpg"</a><p><strong>Productos Complementarios</strong></p> <p>Relajación y Descanso</p></a></li>
+            
+            </ul> 
+              </div>
+
+    <div id="bottom_nav" data-fullscreen="true">
+        <div class="icons_nav">
+            <div class="paginated"> <!--Remove this DIV if you want to remove the pagination-->
+                <ul class="slides">
+                     <li>
+                       <a href="index.html" data-ajax="false"> 
+                        <img src="images/icons/icon-home.png" border="0"/>Inicio</a>
+                        <a href="products.html" data-ajax="false">
+                        <img src="images/icons/icon-info.png" border="0" />Productos</a>
+                        <a href="tips.html" data-ajax="false">
+                        <img src="images/icons/icon-products.png" border="0"/>Tips</a>
+                        <a href="gallery.html" data-ajax="false">
+                        <img src="images/icons/icon-photos.png" border="0" />Galería</a>
+                    </li>
+                    <li>
+                        <a href="facebook.html" data-ajax="false">
+                        <img src="images/icons/icon-facebook.png" border="0" />Facebook</a>
+                        <a href="index.html" data-ajax="false">
+                        <img src="images/icons/icon-twitter.png" border="0" />Asesor</a>
+                        <a href="youtube.html" data-ajax="false">
+                        <img src="images/icons/icon-video.png" border="0"/>YouTube</a>
+                         <a href="map.html" data-ajax="false">
+                        <img src="images/icons/icon-map.png" border="0" />Ventas</a>
+                    </li> 
+                </ul>
+            </div>    
+        </div>
+    </div>
+    
+    
+    
 </div>
 
 <div id="producto1" data-role="page" data-add-back-btn="true">
 
   <div data-role="header" data-position="fixed" data-theme="a"> 
-     <h1>Servicios</h1>
+     <h1>Productos</h1>
   </div>
 
    <div class="content" data-role="content" >
 
-    <h1>Endodoncia</h1>
+    <h1>Colchones</h1>
 
-    <img src="images/1.jpg" class="photo"></img><br>
+    <img src="images/colchones.jpg" class="photo"></img><br>
+    <p> Solution Diamond </p>
+    <p> Platinum Premium </p>
+    <p> Titanium Premium </p>
+    <p> Colchon Duplex </p>
+    <p> Cliniflex Gold </p>
+    <p> Gold Pillow </p>
 
-        <p>Es una especialidad de la Odontología, encargada de la prevención, diagnostico y tratamiento de las Enfermedades De La Pulpa Dental y vasos sanguíneos.</p>
-        <br>
-        <p>Este tratamiento consiste en remover el tejido pulpar o el contenido de los conductos radiculares y colocar después un material de obturación para sellar esos espacios que fueron previamente Limpiados Y Desinfectados.</p>
-               
+         
   </div>
 
 </div>
@@ -92,24 +120,21 @@
 <div id="producto2" data-role="page" data-add-back-btn="true">
 
   <div data-role="header" data-position="fixed" data-theme="a"> 
-     <h1>Servicios</h1>
+     <h1>Productos</h1>
   </div>
 
    <div class="content" data-role="content" >
 
-    <h1>Ortodoncia</h1>
+    <h1>Almohadas</h1>
 
-    <img src="images/2.jpg" class="photo"></img><br>
-
-        <p>Es una especialidad de la odontología encargada de la Prevención, Diagnostico Y Tratamiento de las malas posiciones dentales y anomalías craneofaciales.</p>
-        <br>
-        <p>La edad del paciente No Es ningún impedimento para que pueda realizarse un tratamiento de Ortodoncia.</p>
-        <br>
-        <p>Dentro de las nuevas técnicas se encuentran:</p>
-        <br>
-        <p><strong>Damon: </strong>Con este sistema el tiempo de tratamiento es generalmente más corto que con la Ortodoncia convencional. Un menor tiempo de tratamiento significa menos citas y un tratamiento más rápido.</p>
-        <br>
-        <p><strong>Ice: </strong>A diferencia de los brackets cerámicos que son opacos y tienen el color de un diente en particular, los brackets ICE son totalmente transparentes y se desaparecen virtualmente, sin importar el color del diente. Tiene bordes redondeados y una superficie suave que ayuda al confort del paciente.</p>
+    <img src="../images/almohadas.jpg" class="photo"></img><br>
+    <p> Almohada Viajera </p>
+    <p> Side Body Pillow </p>
+    <p> Contour Pillow </p>
+    <p> Almohada Anatomica </p>
+    <p> Almohada Luxe </p>
+    <p> Pillow Flex </p>
+        
         
   </div>
 
@@ -118,75 +143,66 @@
 <div id="producto3" data-role="page" data-add-back-btn="true">
 
   <div data-role="header" data-position="fixed" data-theme="a"> 
-     <h1>Servicios</h1>
+     <h1>Productos</h1>
   </div>
 
    <div class="content" data-role="content" >
 
-    <h1>Periodoncia</h1>
+    <h1>Camas</h1>
 
-    <img src="images/3.jpg" class="photo"></img><br>
+    <img src="images/camas.jpg" class="photo"></img><br>
+    <h1> <strong> Camas Eléctricas </strong> </h1>
+    <p> Quality Sleep System </p>
+    <p> Quality Sleep System Super Pedic </p>
+    <br>
+    <h1> <strong> Camas Bases </strong> </h1>
+    <p> Somier </p>
+    <p> Duplex Bed </p>
 
-        <p>Es la rama de la odontología que se especializa en el tratamiento de los tejidos de soporte del diente como son la encía y el hueso alveolar; el especialista en este campo se encuentra capacitado en la colocación, mantenimiento y tratamiento de implantes dentales.</p>
-        
-    </div>
+      
+
+  </div>
 
 </div>
 
 <div id="producto4" data-role="page" data-add-back-btn="true">
 
   <div data-role="header" data-position="fixed" data-theme="a"> 
-     <h1>Servicios</h1>
+     <h1>Productos</h1>
   </div>
 
    <div class="content" data-role="content" >
 
-    <h1>Rehabilitación Oral</h1>
+    <h1>Productos Complementarios</h1>
 
-    <img src="images/4.jpg" class="photo"></img><br>
+    <img src="images/accesorios.jpg" class="photo"></img><br>
+     <p> Pillow Pad Confort </p>
+    <p> Sabanas 400 Hilos </p>
+    <p> Sofá Puff </p>
+    <p> Pillow Pad </p>
+    <p> Colchoneta Antirreflujo </p>
+    <p> Colchoneta Antiestrés </p>
+    
 
-        <p>Es una de las Especialidades mas importantes de la odontología ya que por medio de esta se realizan los tratamientos estéticos funcionales necesarios para el beneficio de la salud y el aspecto oral. En la Rehabilitación se implementan dientes artificiales para remplazar los dientes perdidos o sin estetica</p>
-        
+      
+
   </div>
 
 </div>
 
-<div id="producto5" data-role="page" data-add-back-btn="true">
 
-  <div data-role="header" data-position="fixed" data-theme="a"> 
-     <h1>Servicios</h1>
-  </div>
-
-   <div class="content" data-role="content" >
-
-    <h1>Cirugía Oral y Maxilofacial</h1>
-
-    <img src="images/5.jpg" class="photo"></img><br>
-
-        <p>Es una especialidad medico-quirúrgica que se ocupa de aquellos patológicos que afectan a la cara y el cuello. Entre estas enfermedades se encuentran: tumores malignos y benignos de la cara y el cuello, fracturas de la cara, malformaciones congénitas, cirugía reconstructiva de la cara y enfermedades relacionadas con las glándulas salivales.</p>
-        
-  </div>
-
-</div>
-
-<div id="producto6" data-role="page" data-add-back-btn="true">
-
-  <div data-role="header" data-position="fixed" data-theme="a"> 
-     <h1>Servicios</h1>
-  </div>
-
-   <div class="content" data-role="content" >
-
-    <h1>Odontologiá Estetica</h1>
-
-    <img src="images/6.jpg" class="photo"></img><br>
-
-        <p>La Odontología estetica es el mejoramiento en el aspecto de la sonrisa de cada persona. En el diseño de sonrisa se modifican la forma, largo y ancho de los dientes superiores como inferiores, mejoramiento del tamaño y forma de las encías y blanqueamiento.</p>
-        
-  </div>
-
-</div>
-
+<!-- Menu Navigation --> 
+<script type="text/javascript"> 
+var j = jQuery.noConflict();
+j(window).load(function() {
+    j('.icons_nav').flexslider({
+    animation: "slide",
+    directionNav: true, <!--Set this to false if you want to remove the arrows navigation of the menu-->
+    animationLoop: false,
+    slideshow: false,
+    });
+});
+</script>
 
 <script type="text/javascript">
 
@@ -194,10 +210,27 @@ function( text, searchValue, item ){
   return text.toString().toLowerCase().indexOf( searchValue ) === -1;
 };
 
-</script>
+<!-- This script creates a new CanvasLoader instance and places it in the wrapper div -->
+    <script type="text/javascript">
+        var cl = new CanvasLoader('canvasloader-container');
+        cl.setShape('rect'); // default is 'oval'
+        cl.setDiameter(29); // default is 40
+        cl.setDensity(16); // default is 40
+        cl.setRange(0.8); // default is 1.3
+        cl.setFPS(12); // default is 24
+        cl.show(); // Hidden by default
+        
+        // This bit is only for positioning - not necessary
+          var loaderObj = document.getElementById("canvasLoader");
+        loaderObj.style.position = "absolute";
+        loaderObj.style["top"] = cl.getDiameter() * -0.5 + "px";
+        loaderObj.style["left"] = cl.getDiameter() * -0.5 + "px";
+    </script>
 
-
-  
 
 </body>
 </html>
+              
+              
+              
+              

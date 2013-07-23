@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- archivo revisado para version Phonegap 2.5 y revisada la documentacion el 15 ABRIL 2013 -->
+<!-- archivo revisado para version Phonegap 2.3 y revisada la documentacion el 8 febrero 2013 -->
 <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id = "com.loscoches.carvajal"
+        id = "com.comodisimos.app"
         versionCode="1"
-        version = "1.0">
+        version = "1.0.0">
         
     <!-- solo caracteres latinos y el nombre debe ser corto -->    
-    <name>LosCoches</name>
+    <name>Comodisimos</name>
     
     <!-- La descripcion NO debe ser muy extensa -->  
     <description>
-        El concesionario más grande de Colombia. 
+        El mejor descanso 
     </description>
 
     <author href="http://carvajal.com" email="apps.carvajal@gmail.com">
@@ -19,25 +19,23 @@
     </author>
     <!-- La etiqueta feature hace referencia a los apis phonegap utilizados y los permisos por parte de los dispositivos -->
  
-
-    <feature name="http://api.phonegap.com/1.0/device" />
-    <feature name="http://api.phonegap.com/1.0/battery"/>
+    <!--To enable individual permissions use the following examples -->
+    <!-- <feature name="http://api.phonegap.com/1.0/battery"/> -->
     <feature name="http://api.phonegap.com/1.0/camera"/>
-    <feature name="http://api.phonegap.com/1.0/contacts"/>
-    <feature name="http://api.phonegap.com/1.0/file"/>
+    <!--   <feature name="http://api.phonegap.com/1.0/contacts"/> -->
+    <!--  <feature name="http://api.phonegap.com/1.0/file"/> -->
     <feature name="http://api.phonegap.com/1.0/geolocation"/>
-    <feature name="http://api.phonegap.com/1.0/media"/>
+    <feature name="http://api.phonegap.com/1.0/media"/> 
     <feature name="http://api.phonegap.com/1.0/network"/>
-    <feature name="http://api.phonegap.com/1.0/notification"/>
-    
-    <access origin="*" />
+    <!--  <feature name="http://api.phonegap.com/1.0/notification"/> -->
+ 
 
     <!-- Las etiquetas preference hacen referenciaa las preferencias, la usencia de alguna de esta tomara el valor por defecto -->
     <!-- por defecto la ultima version estable de PhoneGap -->
     <preference name="phonegap-version" value="2.5.0" />
     
     <!-- Por defecto la orientacion es ambas portrait and landscape -->
-    <preference name="orientation" value="default"/>
+    <preference name="orientation" value="portrait"/>
     
     <!-- Por defecto es universal, solo funciona para IOS, las variables son handset, tablet, or universal -->
     <!-- <preference name="target-device" value="universal" /> -->
@@ -52,7 +50,7 @@
     <preference name="prerendered-icon" value="true" />
     
     <!-- Por defecto es false, si es true abre todos los links en el webview-->
-    <preference name="stay-in-webview" value="default" />
+    <preference name="stay-in-webview" value="true" />
     
     <!-- Por defecto es true, identifica los numeros de telefono y fechas y los convierte en fechas -->
     <!-- <preference name="detect-data-types" value="false" /> -->
@@ -62,17 +60,12 @@
     
     <!-- Por defecto es 7 android 2.1 mirar tabla y es la minima version que soporta la app http://developer.android.com/guide/topics/manifest/uses-sdk-element.html -->
     <preference name="android-minSdkVersion" value="8" />
-
-    <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
-    <preference name="android-installLocation"    value="auto" />       
     
     <!-- No viene por defecto, solo se utiliza si fuera hasta una version en especifico, mirar misma url anterior -->
     <!-- <preference name="android-maxSdkVersion" value="15" /> -->
     
     <!-- Duracion del splash por defecto son 5 sec 5000 -->
     <preference name="splash-screen-duration" value="4000" />
-
-     <access origin="*" browserOnly="true" />
 
     <icon src="icon.png" />
     
@@ -95,9 +88,6 @@
     <icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
     <!-- Android Icons low density 96x96 -->
     <icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
-    <!-- Android Icons low density 96x96 -->
-    <icon src="icons/android/xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
-
     
     <!-- BB Icons menos de 16kb-->
     <!-- BB Icon 72x72 -->
@@ -144,10 +134,9 @@
 
     <!-- Plug in Camera para IOS -->
     <plugin name="Camera" value="CDVCamera" />
-    
 
     <!--Plug in Network Android-->
-    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+    <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
 
     <!--Plug in Network IOS-->
     <plugin name="NetworkStatus" value="CDVConnection" />
@@ -156,7 +145,7 @@
     <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" /> <!--Android -->
     <plugin name="InAppBrowser" value="CDVInAppBrowser" /> <!-- IOS -->
     
-    
-    <gap:plugin name="com.phonegap.plugins.childbrowser" />
+    <!--Share -->
+    <plugin name="Social" value="Social" />
     
 </widget>

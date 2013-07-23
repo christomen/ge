@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width">
+<meta name="author" content="Carvajal Informacion" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<title>COOMOTOR</title>
+
+<!-- Main CSS file --><link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+  
+<!--JS --> 
+<script src="js/jquery.min.js"></script>
+
+<!-- FlexSlider --><script src="js/jquery.flexslider.js"></script>
+
+    <!-- Include the heartcode canvasloader js file -->
+    <script src="http://heartcode-canvasloader.googlecode.com/files/heartcode-canvasloader-min-0.9.1.js"></script>
+
+
+</head>
+<body>
+
+    <div id="canvasloader-container" class="wrapper"></div>
+
+    <div id="main_panels" data-role="page">
+        <div class="panels_slider">
+            <ul class="slides">
+                <li><img src="images/panel_start.jpg" border="0" width="100%" height="auto"/></li>
+                <li><img src="images/panel_start2.jpg" border="0" width="100%" height="auto"/></li>
+                <li><img src="images/panel_1.jpg" border="0" width="100%" height="auto" /></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="bottom_nav" data-fullscreen="true">
+        <div class="icons_nav">
+            <div class="paginated"> <!--Remove this DIV if you want to remove the pagination-->
+                <ul class="slides">
+                     <li>
+                       <a href="index.html" data-ajax="false"> 
+                        <img src="images/icons/icon-home.png" border="0"/>Inicio</a>
+                        <a href="products.html" data-ajax="false">
+                        <img src="images/icons/icon-info.png" border="0" />Productos</a>
+                        <a href="tips.html" data-ajax="false">
+                        <img src="images/icons/icon-products.png" border="0"/>Tips</a>
+                        <a href="gallery.html" data-ajax="false">
+                        <img src="images/icons/icon-photos.png" border="0" />Galería</a>
+                    </li>
+                    <li>
+                        <a href="facebook.html" data-ajax="false">
+                        <img src="images/icons/icon-facebook.png" border="0" />Facebook</a>
+                        <a href="index.html" data-ajax="false">
+                        <img src="images/icons/icon-twitter.png" border="0" />Asesor</a>
+                        <a href="youtube.html" data-ajax="false">
+                        <img src="images/icons/icon-video.png" border="0"/>YouTube</a>
+                         <a href="map.html" data-ajax="false">
+                        <img src="images/icons/icon-map.png" border="0" />Ventas</a>
+                    </li> 
+                </ul>
+            </div>    
+        </div>
+    </div>
+
+
+<script type="text/javascript"> 
+var j = jQuery.noConflict();
+j(window).load(function() {
+  j('.icons_nav').flexslider({
+    animation: "slide",
+    directionNav: true, <!--Set this to false if you want to remove the arrows navigation of the menu-->
+    animationLoop: false,
+    slideshow: false,
+    });
+    j('.panels_slider').flexslider({
+    animation: "slide",
+    directionNav: false,
+    controlNav: true, 
+    animationLoop: true,
+    slideToStart: 1,
+    animationDuration: 300, 
+    slideshow: true
+    });
+});
+</script>
+
+<!-- This script creates a new CanvasLoader instance and places it in the wrapper div -->
+    <script type="text/javascript">
+        var cl = new CanvasLoader('canvasloader-container');
+        cl.setShape('rect'); // default is 'oval'
+        cl.setDiameter(29); // default is 40
+        cl.setDensity(16); // default is 40
+        cl.setRange(0.8); // default is 1.3
+        cl.setFPS(12); // default is 24
+        cl.show(); // Hidden by default
+        
+        // This bit is only for positioning - not necessary
+          var loaderObj = document.getElementById("canvasLoader");
+        loaderObj.style.position = "absolute";
+        loaderObj.style["top"] = cl.getDiameter() * -0.5 + "px";
+        loaderObj.style["left"] = cl.getDiameter() * -0.5 + "px";
+    </script>
+
+
+</body>
+</html>

@@ -1,34 +1,161 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <style>
-      html, body, #map-canvas {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-      }
-    </style>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <script>
-var map;
-function initialize() {
-  var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(-34.397, 150.644),
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-}
+    <head>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width">
+            <meta name="author" content="Carvajal Informacion" />
+            <meta name="description" content="" />
+            <meta name="keywords" content="" />
+            
+            <title>QuickApps</title>
+            
+            <!--CSS -->
+            <link rel="stylesheet" type="text/css" href="css/styles.css" />
+            <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.1.css" />
+            <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.3.1.css" />
+            <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.3.1.css" />
+            
+            <!--Javascripts-->
+            <script type="text/javascript" src="js/cordova.js"></script>
+            <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+            <script type="text/javascript" src="js/jquery.mobile-1.3.1.js"></script>
+            
+            <!-- FlexSlider --><script src="js/jquery.flexslider.js"></script>
 
-google.maps.event.addDomListener(window, 'load', initialize);
+<!-- MAPA -->
+<style type="text/css">
+  #map { height: auto; }
+</style>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+           
+            
+            <script type="text/javascript">
+                function initialize() {
+                    
+                    var locations = [
+                                     ['Sucursal', 4.70449395,-74.0327706, 1],
+                                     ];
+                    
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                                                  zoom: 11,
+                                                  center: new google.maps.LatLng(4.60971,-74.08175),
+                                                  mapTypeId: google.maps.MapTypeId.ROADMAP
+                                                  });
+                    
+                    var infowindow = new google.maps.InfoWindow();
+                    var image = 'star.png';
+                    var marker, i;
+                    
+                    for (i = 0; i < locations.length; i++) {
+                        marker = new google.maps.Marker({
+                                                        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                                                        map: map
+                                                        });
+                        
+                        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                                                                        return function() {
+                                                                        infowindow.setContent(locations[i][0]);
+                                                                        infowindow.open(map, marker);
+                                                                        }
+                                                                        })(marker, i));
+                    }
+                    
+                    // Check if user support geo-location
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(function(position) {
+                                                                 var latitude = position.coords.latitude;
+                                                                 var longitude = position.coords.longitude;
+                                                                 var geolocpoint = new google.maps.LatLng(latitude, longitude);
+                                                                 
+                                                                 var mapOptions = {
+                                                                 zoom: 8,
+                                                                 center: geolocpoint,
+                                                                 mapTypeId: google.maps.MapTypeId.HYBRID
+                                                                 }
+                                                                 // Place a marker
+                                                                 var geolocation = new google.maps.Marker({
+                                                                                                          position: geolocpoint,
+                                                                                                          map: map,
+                                                                                                          title: 'Your geolocation',
+                                                                                                          icon: 'http://labs.google.com/ridefinder/images/mm_20_green.png'
+                                                                                                          });
+                                                                 });
+                    }
+                }
+                google.maps.event.addDomListener(window, 'load', initialize);
+                
+                </script>
+   
 
-    </script>
-  </head>
-  <body>
-    <div id="map-canvas"></div>
-  </body>
+</head>
+
+
+<body onload="initialize()">
+
+<div data-role="page">
+
+    <div data-role="header" data-position="fixed" data-theme="a">
+        <h1>Contacto</h1>
+    </div>
+
+    <div class="content" data-role="content">
+        <h2>Nuestras Sedes</h2>
+                          
+            <p>Contamos con diferentes Unidades Estéticas a Nivel Nacional para prestarte un excelente servicio.</p><br>
+    
+        <div id="map" style="width:100%; height:350px;"></div>
+ 
+            
+
+
+    </div>
+ 
+
+   <div id="bottom_nav" data-fullscreen="true">
+        <div class="icons_nav">
+            <div class="paginated"> <!--Remove this DIV if you want to remove the pagination-->
+                <ul class="slides">
+                     <li>
+                       <a href="index.html" data-ajax="false"> 
+                        <img src="images/icons/icon-home.png" border="0"/>Marlon</a>
+                        <a href="products.html" data-ajax="false">
+                        <img src="images/icons/icon-products.png" border="0" />Servicios</a>
+                        <a href="contact.html" data-ajax="false">
+                        <img src="images/icons/icon-phone.png" border="0"/>Testimonios</a>
+                        <a href="youtube.html" data-ajax="false">
+                        <img src="images/icons/icon-video.png" border="0" />YouTube</a>
+                    </li>
+                    <li>
+                         <a href="gallery.html" data-ajax="false">
+                        <img src="images/icons/icon-photos.png" border="0" />Pacientes</a>
+                        <a href="facebook.html" data-ajax="false">
+                        <img src="images/icons/icon-facebook.png" border="0" />Facebook</a>
+                         <a href="news.html" data-ajax="false">
+                        <img src="images/icons/icon-news.png" border="0" />Noticias</a>
+                        <a href="map.html" data-ajax="false">
+                        <img src="images/icons/icon-map.png" border="0" />Contacto</a>
+                        
+                    </li>
+                </ul>
+            </div> <!--Remove this DIV if you want to remove the pagination-->
+        </div>
+    </div>
+</div>
+    
+<!-- Menu Navigation --> 
+<script type="text/javascript"> 
+var j = jQuery.noConflict();
+j(window).load(function() {
+    j('.icons_nav').flexslider({
+    animation: "slide",
+    directionNav: true, <!--Set this to false if you want to remove the arrows navigation of the menu-->
+    animationLoop: false,
+    slideshow: false,
+    });
+});
+</script>
+
+    
+</body>
 </html>

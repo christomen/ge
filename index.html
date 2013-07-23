@@ -66,56 +66,5 @@
 
         </div>    
         
-        <script type="text/javascript">
-            var $ = jQuery.noConflict();
-            $(window).load(function() {
-                           $('.panels_slider').flexslider({
-                                                          animation: "slide",
-                                                          directionNav: false,
-                                                          controlNav: true,
-                                                          animationLoop: true,
-                                                          slideToStart: 1,
-                                                          animationDuration: 300, 
-                                                          slideshow: true
-                                                          });
-                           });
-            </script>
-<script type="text/javascript"> 
-var j = jQuery.noConflict();
-j(window).load(function() {
-  j('.icons_nav').flexslider({
-    animation: "slide",
-    directionNav: true, <!--Set this to false if you want to remove the arrows navigation of the menu-->
-    animationLoop: false,
-    slideshow: false,
-    });
-    j('.panels_slider').flexslider({
-    animation: "slide",
-    directionNav: false,
-    controlNav: true, 
-    animationLoop: true,
-    slideToStart: 1,
-    animationDuration: 300, 
-    slideshow: true
-    });
-});
-</script>
-
-<!-- This script creates a new CanvasLoader instance and places it in the wrapper div -->
-    <script type="text/javascript">
-        var cl = new CanvasLoader('canvasloader-container');
-        cl.setShape('rect'); // default is 'oval'
-        cl.setDiameter(29); // default is 40
-        cl.setDensity(16); // default is 40
-        cl.setRange(0.8); // default is 1.3
-        cl.setFPS(12); // default is 24
-        cl.show(); // Hidden by default
-        
-        // This bit is only for positioning - not necessary
-          var loaderObj = document.getElementById("canvasLoader");
-        loaderObj.style.position = "absolute";
-        loaderObj.style["top"] = cl.getDiameter() * -0.5 + "px";
-        loaderObj.style["left"] = cl.getDiameter() * -0.5 + "px";
-    </script>
     </body>
 </html>

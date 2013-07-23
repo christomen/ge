@@ -7,23 +7,23 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
         
-        <title>QuickApps</title>
+        <title>Los Coches</title>
         
-        <!--CSS -->
-        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+<!-- Main CSS file --><link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.1.css" />
         <link rel="stylesheet" href="themes/theme.css" />   
 
-        <!--Javascripts-->
-        <script type="text/javascript" src="js/cordova.js"></script>
-        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-        <script type="text/javascript" src="js/jquery.mobile-1.3.1.js"></script>
-        
-        <!-- FlexSlider --><script src="js/jquery.flexslider.js"></script>
+  
+<!--JS --> 
 
-        <style type="text/css">
-          .my-button {background-image: url(images/menu.png) !important;background-repeat: no-repeat !important;background: transparent;height: 30px;width: 30px;border: 0 !important;}
-        </style>
+<script src="js/jquery.mobile-1.3.1.js"></script>
+<script src="js/jquery-1.10.2.js"></script>
+
+<!-- FlexSlider --><script src="js/jquery.flexslider.js"></script>
+
+    <!-- Include the heartcode canvasloader js file -->
+    <script src="http://heartcode-canvasloader.googlecode.com/files/heartcode-canvasloader-min-0.9.1.js"></script>
+
 
     </head>
     
@@ -31,14 +31,14 @@
        <div data-role="page"> 
 
             <div data-role="header" data-position="fixed" data-theme="a">
-              <h1>QuickApps</h1>
+              <h1>Los Coches</h1>
                 <a href="#navg" data-role="botton" data-shadow="false" class="my-button" data-corners="false" data-iconshadow="false" ></a>
             </div>
 
             <div data-role="panel" id="navg" data-display="push" data-theme="a" data-position-fixed="true" >
                 <ul data-role="listview" data-theme="a">
-                  <h1 style="margin:5% 0 5% 10%;">QuickApps</h1>                
-                    <li><a href="contacto.html" data-transition="slideup">Contacto</a></li>
+                  <h1 style="margin:5% 0 5% 10%;">Los Coches</h1>                
+                    <li><a href="contacto.html" data-transition="slideup">Contactenos</a></li>
                     <li><a href="forms.html" data-transition="slideup">Formulario</a></li>
                 </ul>
             </div>
@@ -71,7 +71,7 @@
 
         </div>    
         
-        <script type="text/javascript">
+       <script type="text/javascript">
             var $ = jQuery.noConflict();
             $(window).load(function() {
                            $('.panels_slider').flexslider({
@@ -84,7 +84,7 @@
                                                           slideshow: true
                                                           });
                            });
-            </script>
-
+            </script>        
+        
     </body>
 </html>

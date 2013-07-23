@@ -2,25 +2,15 @@
 <html>
 <head>
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
-<meta name="author" content="Carvajal Informacion" />
-<meta name="description" content="" />
-<meta name="keywords" content="" />
-
-<title>COMODISIMOS</title>
-
-<!-- Main CSS file --><link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-<!--JQueryMobile CSS --><link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
-  
-<!--JQueryMobile JS --> 
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.mobile-1.2.0.min.js"></script>
-
-
-
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    
+    <title>Marlon Becerra</title>
+    
+    
     <!-- InAppBrowser -->
-    <script type="text/javascript" charset="utf-8" src="js/cordova-2.3.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
         
         // Wait for Cordova to load
@@ -31,32 +21,30 @@
         //
         function onDeviceReady() {
             // external url
-            var ref = window.open(encodeURI('http://www.youtube.com/watch?v=3jSfinrXyWg'), '_blank', 'location=yes');
+            var ref = window.open(encodeURI('https://www.youtube.com/'), '_blank', 'location=yes');
             // relative document
             ref = window.open('index.html', '_self');
         }
-    
-    </script>
-    
-<!-- This script creates a new CanvasLoader instance and places it in the wrapper div -->
-    <script type="text/javascript">
-        var cl = new CanvasLoader('canvasloader-container');
-        cl.setShape('rect'); // default is 'oval'
-        cl.setDiameter(29); // default is 40
-        cl.setDensity(16); // default is 40
-        cl.setRange(0.8); // default is 1.3
-        cl.setFPS(12); // default is 24
-        cl.show(); // Hidden by default
         
-        // This bit is only for positioning - not necessary
-          var loaderObj = document.getElementById("canvasLoader");
-        loaderObj.style.position = "absolute";
-        loaderObj.style["top"] = cl.getDiameter() * -0.5 + "px";
-        loaderObj.style["left"] = cl.getDiameter() * -0.5 + "px";
-    </script>
-</head>
-<body>
+        </script>
 
+ <!-- This script creates a new CanvasLoader instance and places it in the wrapper div -->
+  <script type="text/javascript">
+    var cl = new CanvasLoader('canvasloader-container');
+    cl.show(); // Hidden by default
+    
+    // This bit is only for positioning - not necessary
+        var loaderObj = document.getElementById("canvasLoader");
+      loaderObj.style.position = "absolute";
+      loaderObj.style["top"] = cl.getDiameter() * -0.5 + "px";
+      loaderObj.style["left"] = cl.getDiameter() * -0.5 + "px";
+        </script>
+
+
+</head>
+<body >
+
+</body>
 
 
 </body>

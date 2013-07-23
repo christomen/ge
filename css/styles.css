@@ -1,0 +1,114 @@
+/*General Setup
+/*-----------------------------------------------------------------------------------*/
+
+body{background-color: #000;font-family:Arial, Helvetica, sans-serif;padding:0;font-size:12px;margin:0 auto;color: #333333;}
+.clear{clear:both;}
+a{ text-decoration:none;color:#FFFFFF;}
+p{padding:0;margin:0px;text-align:left;line-height:20px; color: #000; text-align: justify; padding: 0% 5%}
+
+/* Swipe Gallery
+/*-------------------------------------------------------------------------------------*/
+
+.gallery { list-style: none; padding: 0; margin: 0; }
+.gallery:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
+.gallery li { float: left; width: 33.33333333%; }
+.gallery li a { display: block; margin: 5px; border: 1px solid #3c3c3c; }
+.gallery li img { display: block; width: 100%; height: auto; }
+
+/*JqueryMobile*/
+/*------------------------------------------------------------------------------------*/
+
+.ui-btn-text {font-size: 12px !important;}
+.ui-icon{background: transparent !important;-webkit-border-radius: 0px !important;border-radius: 0px !important; margin-top: 5%; text-align: center !important; }
+.ui-icon-portafolio, .ui-icon-galeria, .ui-icon-facebook, .ui-icon-mas, .ui-icon-cerca {background-color: transparent !important;border: none !important;box-shadow: none !important;}
+.ui-icon-portafolio {background: url(../images/icons.png) no-repeat 80.386% 20.141% !important;background-size: 350px 720px !important;	width: 14px;height: 14px !important;} 
+.ui-icon-galeria  {background: url(../images/icons.png)no-repeat 4.727% 23.783% !important;background-size: 350px 720px !important;width: 14px;height: 14px !important;} 
+.ui-icon-facebook  {background: url(../images/icons.png) no-repeat 64.483% 52.583% !important;background-size: 350px 720px !important; width: 14px !important; height: 14px !important;}
+.ui-icon-cerca  {background: url(../images/icons.png) no-repeat 42.753% 27.472% !important;background-size: 350px 720px !important;width: 14px;height: 14px !important;}
+.ui-icon-mas  {background: url(../images/icons.png) no-repeat 5.263% 56.11% !important;background-size: 350px 720px !important;width: 14px !important;height: 14px !important;}
+
+
+/* Flex images slider
+/*-----------------------------------------------------------------------------------*/
+.flex-container a:active,
+.icons_nav a:active { outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+.icons_nav {padding:0; width:100%; margin: 0;}
+.icons_nav .slides li a{ float:left; margin: 0;padding:0; font-size:15px; color:#000000; text-align:center; line-height:35px; width:19.5%;}
+.icons_nav .paginated {padding:0; width:94%; margin: 0;}
+.icons_nav .paginated .slides li a{ float:left; margin:0 ;padding: 0; font-size:15px; color:#000000; text-align:center; line-height:35px; width:18.5%;}
+.icons_nav .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.icons_nav .slides img {max-width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+.panels_slider {width: 100%; height:auto; margin: 0; padding: 0;}
+.panels_slider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.panels_slider .slides img {max-width: 100%; display: block;}
+
+.images_slider_container{max-width:96%; display: block;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; background-color:#ececec; border:1px #d7d7d7 solid; padding:1.5%; margin:0 0 20px 0;}
+.images_slider {width: 100%; margin:0; padding: 0; position:relative;}
+.images_slider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.images_slider .slides img {max-width: 100%; display: block;}
+
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+.no-js .slides > li:first-child {display: block;}
+
+.icons_nav { position: relative;zoom: 1;}
+.icons_nav .slides {zoom: 1;}
+.icons_nav .slides > li {position: relative; }
+.flex-container {zoom: 1; position: relative;}
+
+.panels_slider ol.flex-control-nav {width: 100%; height: auto; position: absolute; bottom:20%; text-align: center;}
+.images_slider ol.flex-control-nav {width: 100%; position: absolute; bottom:0%; text-align: center; background:url(images/nav_bg.png) repeat-x top; padding:15px 0 15px 0;}
+.icons_nav ol.flex-control-nav {width: 100%; position: absolute; text-align: center; padding:0;}
+.flex-control-nav li {margin: 0; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-nav li:first-child {margin: 0;}
+.flex-control-nav li a {width: 13px; height: 13px; display: block; background: url(images/bg_control_nav.png) no-repeat 0 0; cursor: pointer; text-indent: -9999px;}
+.flex-control-nav li a:hover {background-position: 0 -13px;}
+.flex-control-nav li a.active {background-position: 0 -26px; cursor: default;}
+
+.icons_nav ul.flex-direction-nav a.prev{ position:absolute; bottom:40%; left:10px; text-indent:-200px; overflow:hidden; background:url(images/prev.png) no-repeat center; width:11px; height:21px;}
+.icons_nav ul.flex-direction-nav a.next{ position:absolute; bottom:40%; right:10px;text-indent:-200px; overflow:hidden; background:url(images/next.png) no-repeat center; width:11px; height:21px;}
+
+.icons_nav_nojs {padding:0; width:100%; margin: 0;}
+.icons_nav_nojs ul li a{ float:left; margin:0 ;padding: 0; font-size:15px; color:#FFFFFF; text-align:center; line-height:0px; width:19.5%;}
+.icons_nav_nojs ul img {max-width: 100%; display: block;}
+
+/*------TWITTER PAGE-------*/
+.twitter{
+	text-align: center;
+}
+
+#jstwitter{width:100%; font-size:14px; color:#333; padding:2px; margin-top:10px}
+#jstwitter .tweet{border-bottom:1px dotted #ccc; background-color:#fff; -moz-border-radius:8px; -webkit-border-radius:8px; -khtml-border-radius:8px; border-radius:8px; -moz-box-shadow:0px 0px 2px 1px #ccc;  -webkit-box-shadow:0px 0px 2px 1px #ccc;  box-shadow:0px 0px 2px 1px #ccc;  margin-top:0; margin-right:auto; margin-bottom:15px; margin-left:auto; padding-top:5px; padding-right:5px; padding-bottom:15px; padding-left:5px}
+#jstwitter .tweet a{text-decoration:none; color:#000000}
+#jstwitter .tweet a:hover{text-decoration:underline}
+#jstwitter .tweet .time{font-size:10px; font-style:italic; color:#666}
+#loading{position:fixed;top:50%;left:50%;z-index:1104;}
+
+
+/* CSS Media Queries
+/*-----------------------------------------------------------------------------------*/
+@media screen and (max-width: 640px) {
+#container{width:100%; height:100%;}
+#pagecontainer{width:100%; height:100%;}
+#bottom_nav{ width:100%;}
+.icons_nav { padding:0; width:100%;}
+.icons_nav .slides li a{ float:left; margin:0 %;padding:0; font-size:12px; color:#cb1616; text-align:center; line-height:20px; width:10%;}
+.icons_nav .paginated{ padding:0 0 0 6%; width:100%;}
+.icons_nav .paginated .slides li a{ float:left; margin:0 0 0 3.6%;padding:2% 0 0 0; font-size:12px; color:#000000; text-align:center; line-height:20px; width:17.5%;}
+}
+ 
+
+
+
+
+
+
+

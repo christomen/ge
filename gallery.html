@@ -1,151 +1,103 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width">
-<meta name="author" content="Carvajal Informacion" />
-<meta name="description" content="" />
-<meta name="keywords" content="" />
-
-<title>COMODISIMOS</title>
-
-<!-- Main CSS file --><link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-<!--JQueryMobile CSS --><link rel="stylesheet"  href="css/jquery.mobile-1.2.0.min.css" />
-
-<!--JQueryMobile JS --> 
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.mobile-1.2.0.min.js"></script>
-
-<!-- FlexSlider --><script src="js/jquery.flexslider.js"></script>
-
-<!-- Include the heartcode canvasloader js file -->
-  <script src="http://heartcode-canvasloader.googlecode.com/files/heartcode-canvasloader-min-0.9.1.js"></script>
-
-</head>
-<body>
-
-<div id="canvasloader-container" class="wrapper"></div>
-
-<div data-role="page">
-
-   <div data-role="header" data-position="fixed" data-theme="b"> 
-     <h1>Galería</h1>
-
-      <a data-mini="true" href="#popupBasic" data-rel="popup" data-theme="c" data-iconpos="notext" data-icon="info" class="ui-btn-right"></a>
-
-    <div data-role="popup" id="popupBasic">
-       <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Cerrar</a>
-     
-          <h1> Galería </h1>
-      
-      <p> Galería de imágenes de nuestros productos</p>
-      <br>
-    </div>
-
-   </div>
-
-   
-    <div class="content" data-role="content">
-
-    <p>Galería de fotos de los mejores Colchones y otros de nuestros productos:</p> <br>
+    <head>
         
-      <div>
-        <ul id="Gallery" class="gallery">
-          <li><a href="images/full/001.jpg" rel="external"><img alt="Dormir Bien" src="images/thumb/001.jpg"/></a></li>
-          <li><a href="images/full/002.jpg" rel="external"><img alt="Colchones" src="images/thumb/002.jpg"/></a></li>
-          <li><a href="images/full/003.jpg" rel="external"><img alt="Silla de Masajes" src="images/thumb/003.jpg"/></a></li>
-          <li><a href="images/full/004.jpg" rel="external"><img alt="Somier" src="images/thumb/004.jpg"/></a></li>
-          <li><a href="images/full/005.jpg" rel="external"><img alt="Sofa Cama" src="images/thumb/005.jpg"/></a></li>
-          <li><a href="images/full/006.jpg" rel="external"><img alt="Comodidad y Descanso" src="images/thumb/006.jpg"/></a></li>
-        </ul>
-      <div>  
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+        <title>QuickApps</title>
+        
+        <!--CSS -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.1.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.3.1.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.3.1.css" />
+        
+        <!--Javascripts-->
+        <script type="text/javascript" src="js/cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.3.1.js"></script>
+        
+        <!-- FlexSlider --><script src="js/jquery.flexslider.js"></script>
 
-    </div>
- 
-    <div id="bottom_nav" data-fullscreen="true">
-        <div class="icons_nav">
-            <div class="paginated"> <!--Remove this DIV if you want to remove the pagination-->
-                <ul class="slides">
-                     <li>
-                        <a href="index.html" data-ajax="false"> 
-                        <img src="images/icons/icon-home.png" border="0"/>Inicio</a>
-                        <a href="products.html" data-ajax="false">
-                        <img src="images/icons/icon-info.png" border="0" />Productos</a>
-                        <a href="tips.html" data-ajax="false">
-                        <img src="images/icons/icon-products.png" border="0"/>Tips</a>
-                        <a href="gallery.html" data-ajax="false">
-                        <img src="images/icons/icon-photos.png" border="0" />Galería</a>
-                    </li>
-                    <li>
-                        <a href="facebook.html" data-ajax="false">
-                        <img src="images/icons/icon-facebook.png" border="0" />Facebook</a>
-                        <a href="index.html" data-ajax="false">
-                        <img src="images/icons/icon-twitter.png" border="0" />Asesor</a>
-                        <a href="youtube.html" data-ajax="false">
-                        <img src="images/icons/icon-video.png" border="0"/>YouTube</a>
-                         <a href="map.html" data-ajax="false">
-                        <img src="images/icons/icon-map.png" border="0" />Ventas</a>
-                    </li> 
+        <style type="text/css">
+            .my-button {background-image: url(images/menu.png) !important;background-repeat: no-repeat !important;background: transparent;height: 30px;width: 30px;border: 0 !important;}
+            </style>
+        
+    </head>
+    
+    <body>
+        <div data-role="page">
+            
+            <div data-role="header" data-position="fixed" data-theme="a">
+                <h1>QuickApps</h1>
+                <a href="#navg" data-role="botton" data-shadow="false" class="my-button" data-corners="false" data-iconshadow="false" ></a>
+            </div>
+
+            <div data-role="panel" id="navg" data-display="push" data-theme="a" data-position-fixed="true" >
+                <ul data-role="listview" data-theme="a">
+                    <h1 style="margin:5% 0 5% 10%;">QuickApps</h1>
+                    <li><a href="contacto.html" data-transition="slideup">Contacto</a></li>
+                    <li><a href="forms.html" data-transition="slideup">Formulario</a></li>
                 </ul>
-            </div>    
-        </div>
+            </div>
+
+    
+           <div data-role="content">
+             
+                   <ul id="Gallery" class="gallery">
+                       <li><a href="images/full/001.jpg" rel="external"><img src="images/thumb/001.jpg" alt="Image 001" /></a></li>
+                       <li><a href="images/full/002.jpg" rel="external"><img src="images/thumb/002.jpg" alt="Image 002" /></a></li>
+                       <li><a href="images/full/003.jpg" rel="external"><img src="images/thumb/003.jpg" alt="Image 003" /></a></li>
+                       <li><a href="images/full/004.jpg" rel="external"><img src="images/thumb/004.jpg" alt="Image 004" /></a></li>
+                       <li><a href="images/full/005.jpg" rel="external"><img src="images/thumb/005.jpg" alt="Image 005" /></a></li>
+                   </ul>
+             
+           </div>
+                   
+                   
+                   
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar" data-grid="d">
+                    <ul>
+                        <li><a href="products.html" data-role="button" data-theme="reset" data-icon="portafolio" data-corners="false" data-iconshadow="false" data-transition="slideup">Portafolio</a></li>
+                        <li><a href="gallery.html" data-role="button" data-theme="reset" data-icon="galeria"  data-corners="false" data-iconshadow="false" data-ajax="false">Galería</a></li>
+                        <li><a href="facebook.html" data-role="button" data-theme="reset" data-icon="facebook" data-corners="false" data-iconshadow="false" data-transition="slideup">Facebook</a></li>
+                        <li><a href="map.html" data-role="button" data-theme="reset" data-icon="cerca"  data-corners="false" data-iconshadow="false" data-transition="slideup">Cerca de mi</a></li>
+                        <li><a href="#navg" data-role="button" data-theme="reset" data-icon="mas" data-corners="false" data-iconshadow="false" data-transition="slideup">Más</a></li>
+                    </ul>
+                </div>
+            </div>
+
     </div>
-</div>
-       
-<!-- Menu Navigation --> 
-<script type="text/javascript"> 
-var j = jQuery.noConflict();
-j(window).load(function() {
-    j('.icons_nav').flexslider({
-    animation: "slide",
-    directionNav: true, <!--Set this to false if you want to remove the arrows navigation of the menu-->
-    animationLoop: false,
-    slideshow: false,
-    });
-});
-</script>
 
-<!-- PHOTO SWIPE CSS -->
-  <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
-
-<!-- PHOTO SWIPE JS -->
-  <script type="text/javascript" src="lib/klass.min.js"></script>
-  <script type="text/javascript" src="js/code.photoswipe-3.0.5.min.js"></script>
-
-  <script type="text/javascript">
-
-    (function(window, PhotoSwipe){
-    
-      document.addEventListener('DOMContentLoaded', function(){
-      
-        var
-          options = {},
-          instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery a'), options );
-      
-      }, false);
-      
-      
-    }(window, window.Code.PhotoSwipe));
-    
-  </script>
-
- <!-- This script creates a new CanvasLoader instance and places it in the wrapper div -->
-    <script type="text/javascript">
-        var cl = new CanvasLoader('canvasloader-container');
-        cl.setShape('rect'); // default is 'oval'
-        cl.setDiameter(29); // default is 40
-        cl.setDensity(16); // default is 40
-        cl.setRange(0.8); // default is 1.3
-        cl.setFPS(12); // default is 24
-        cl.show(); // Hidden by default
         
-        // This bit is only for positioning - not necessary
-          var loaderObj = document.getElementById("canvasLoader");
-        loaderObj.style.position = "absolute";
-        loaderObj.style["top"] = cl.getDiameter() * -0.5 + "px";
-        loaderObj.style["left"] = cl.getDiameter() * -0.5 + "px";
-    </script>
-
+          <!-- PHOTO SWIPE CSS -->
+        <link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+        
+        <!-- PHOTO SWIPE JS -->
+        <script type="text/javascript" src="lib/klass.min.js"></script>
+        <script type="text/javascript" src="js/code.photoswipe-3.0.5.min.js"></script>
+        
+        <script type="text/javascript">
+            
+            (function(window, $, PhotoSwipe){
+             
+             $(document).ready(function(){
+                               
+                               var options = {};
+                               $("#Gallery a").photoSwipe(options);
+                               
+                               });
+             
+             
+             }(window, window.jQuery, window.Code.PhotoSwipe));
+            
+            </script>
+   
 </body>
 </html>
+
+

@@ -34,7 +34,7 @@
 
     <!-- Las etiquetas preference hacen referenciaa las preferencias, la usencia de alguna de esta tomara el valor por defecto -->
     <!-- por defecto la ultima version estable de PhoneGap -->
-    <preference name="phonegap-version" value="2.9.0" />
+    <preference name="phonegap-version" value="2.5.0" />
     
     <!-- Por defecto la orientacion es ambas portrait and landscape -->
     <preference name="orientation" value="default"/>

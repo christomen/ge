@@ -71,5 +71,20 @@
 
         </div>    
         
+       <script type="text/javascript">
+            var $ = jQuery.noConflict();
+            $(window).load(function() {
+                           $('.panels_slider').flexslider({
+                                                          animation: "slide",
+                                                          directionNav: false,
+                                                          controlNav: true,
+                                                          animationLoop: true,
+                                                          slideToStart: 1,
+                                                          animationDuration: 300, 
+                                                          slideshow: true
+                                                          });
+                           });
+            </script>        
+        
     </body>
 </html>

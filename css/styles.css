@@ -22,8 +22,8 @@ p{padding:0;margin:0px;text-align:left;line-height:20px; color: #000; text-align
 .ui-icon{background: transparent !important;-webkit-border-radius: 0px !important;border-radius: 0px !important; margin-top: 5%; text-align: center !important; }
 .ui-icon-portafolio, .ui-icon-galeria, .ui-icon-facebook, .ui-icon-mas, .ui-icon-cerca {background-color: transparent !important;border: none !important;box-shadow: none !important;}
 .ui-icon-LosCoches {background: url(../images/icons.png) no-repeat 80.386% 20.141% !important;background-size: 350px 720px !important;	width: 14px;height: 14px !important;} 
-.ui-icon-galeria  {background: url(../images/icons.png)no-repeat 4.727% 23.783% !important;background-size: 350px 720px !important;width: 14px;height: 14px !important;} 
-.ui-icon-facebook  {background: url(../images/icons.png) no-repeat 64.483% 52.583% !important;background-size: 350px 720px !important; width: 14px !important; height: 14px !important;}
+.ui-icon-galeria  {background: url(../images/icons.png)no-repeat 50.727% 66.993% !important;background-size: 350px 720px !important;width: 14px;height: 14px !important;} 
+.ui-icon-facebook  {background: url(../images/icons.png) no-repeat 80.683% 5.583% !important;background-size: 350px 720px !important; width: 14px !important; height: 14px !important;}
 .ui-icon-cerca  {background: url(../images/icons.png) no-repeat 42.753% 27.472% !important;background-size: 350px 720px !important;width: 14px;height: 14px !important;}
 .ui-icon-mas  {background: url(../images/icons.png) no-repeat 5.263% 56.11% !important;background-size: 350px 720px !important;width: 14px !important;height: 14px !important;}
 

@@ -36,13 +36,16 @@
         function initialize() {
             
             var locations = [
-                             ['Sucursal', 4.68023,-74.081862, 2],
-                             ['Sucursal2', 4.615143,-74.137943, 1],
+            				 ['Sede Chia', 4.849381,-74.050748, 5],
+            				 ['Sede 127 Ford', 4.710524,-74.076530, 4],
+            				 ['Sede Megacentro Ford', 4.678186,-74.115171, 3],
+                             ['Sede 26 Volkswagen', 4.671548,-74.113966, 2],
+                             ['Sede Morato MG', 4.694151,-74.074901, 1],
                              ];
             
             var map = new google.maps.Map(document.getElementById('map'), {
                                           zoom: 11,
-                                          center: new google.maps.LatLng(4.60971,-74.08175),
+                                          center: new google.maps.LatLng(4.750524,-74.076530),
                                           mapTypeId: google.maps.MapTypeId.ROADMAP
                                           });
             
@@ -128,7 +131,7 @@
 <div data-role="page">
 
     <div data-role="header" data-position="fixed" data-theme="a">
-      <h1>Los Coches</h1>
+      <h1>Salas de Ventas</h1>
         <a href="#navg" data-role="botton" data-shadow="false" class="my-button" data-corners="false" data-iconshadow="false" ></a>
     </div>
 
@@ -142,9 +145,9 @@
 
 
     <div data-role="content">
-        <h2>Nuestras Sedes</h2>
+        <h2>Salas de Ventas Cerca de Ti</h2>
                           
-            <p>Contamos con diferentes Unidades Estéticas a Nivel Nacional para prestarte un excelente servicio.</p><br>
+            <p>Visita nuestras nuevas y modernas salas de ventas.</p><br>
     
          <div id="map" style="width:100%; height:350px;"></div>
 
@@ -153,11 +156,11 @@
     <div data-role="footer" data-position="fixed">
         <div data-role="navbar" data-grid="d">
             <ul>
-                <li><a href="marcas.html" data-role="button" data-theme="reset" data-icon="LosCoches" data-corners="false" data-iconshadow="false" data-transition="slideup" data-ajax="false">Los Coches</a></li>
-                <li><a href="gallery.html" data-role="button" data-theme="reset" data-icon="galeria"  data-corners="false" data-iconshadow="false" data-ajax="false">Galería</a></li>
-                <li><a href="facebook.html" data-role="button" data-theme="reset" data-icon="facebook" data-corners="false" data-iconshadow="false" data-transition="slideup">Facebook</a></li>
-                <li><a href="map.html" data-role="button" data-theme="reset" data-icon="cerca"  data-corners="false" data-iconshadow="false" data-transition="slideup">Cerca de mi</a></li>
-                <li><a href="#navg" data-role="button" data-theme="reset" data-icon="mas" data-corners="false" data-iconshadow="false" data-transition="slideup">Más</a></li>
+                    <li><a href="marcas.html" data-role="button" data-theme="reset" data-icon="LosCoches" data-corners="false" data-iconshadow="false" data-transition="slideup" data-ajax="false">Los Coches</a></li>
+                    <li><a href="products.html" data-role="button" data-theme="reset" data-icon="galeria"  data-corners="false" data-iconshadow="false" data-ajax="false">Talleres</a></li>
+                    <li><a href="map.html" data-role="button" data-theme="reset" data-icon="cerca"  data-corners="false" data-iconshadow="false" data-ajax="false">Sala Ventas</a></li>
+                    <li><a href="contacto.html" data-role="button" data-theme="reset" data-icon="facebook" data-corners="false" data-iconshadow="false" data-ajax="false">Tu Usado</a></li>
+                    <li><a href="#navg" data-role="button" data-theme="reset" data-icon="mas" data-corners="false" data-iconshadow="false" data-transition="slideup">Más</a></li>
             </ul>
         </div>
     </div>
